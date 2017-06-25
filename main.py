@@ -122,5 +122,7 @@ if __name__=='__main__':
     marketDownload.save_depth_info(['Bithumb'])
 
 if __name__=='__main__2':
+    import public_markets
+    public_markets.Market.get_market_list()
     mkt=public_markets.Market.get_market('BitmexFuture')
     mkt.update_depth()
