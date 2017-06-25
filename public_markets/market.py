@@ -100,7 +100,7 @@ class Market(object):
     def format_depth(self,depth,ticker):
         if not all(k in depth for k in ('xt', 'asks', 'bids')):
             raise Exception('invalid format from get_exchnage_depth')
-        depth['date'] = datetime.datetime.now().date().strftime('%Y.%m.%d')
+        depth['date'] = datetime.datetime.combine(datetime.date.today(),datetime.datetime.min.time())
         depth['lu'] = datetime.datetime.utcnow()
         depth['_id'] = self.gen_id(depth['lu'], ticker)
         occy,pccy = self.get_currency_pair(ticker)
