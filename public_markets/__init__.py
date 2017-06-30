@@ -7,5 +7,7 @@ from .coinone import *
 from .bitmex import *
 from .gdax import *
 from .kraken import  *
+from .okcoin import *
+from .huobi import *
 from .templateMarket import *
 #__all__=['market','bitstampusd','bitfinexusd']
